@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Челлендж: 1 навык за 7 дней</title>
+  <meta name="description" content="Лендинг челленджа: прокачай 1 навык за 7 дней. Присоединяйся и действуй." />
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Навбар -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#top">
+        <img src="https://placehold.co/32x32" alt="Логотип" class="rounded">
+        <span class="fw-bold">Skill7</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Переключить навигацию">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="#hero">Главная</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">О нас</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Услуги</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacts">Контакты</a></li>
+          <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+            <a class="btn btn-primary btn-cta" href="#join">Присоединиться</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header id="hero" class="hero-section position-relative text-white">
+    <div class="hero-overlay"></div>
+    <picture>
+      <!-- Мобильный фоновый вариант -->
+      <source media="(max-width: 575.98px)" srcset="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=1200&q=70&auto=format&fit=crop">
+      <!-- Десктоп фоновый вариант -->
+      <img class="hero-bg" src="https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?w=1920&q=70&auto=format&fit=crop" alt="Фон: обучение и прогресс">
+    </picture>
+    <div class="container position-relative">
+      <div class="row">
+        <div class="col-lg-8 col-xl-7">
+          <h1 class="display-5 fw-bold hero-title">Челлендж: 1 навык за 7 дней</h1>
+          <p class="lead hero-subtitle">Каждый день по маленькому шагу. Результат — через неделю.</p>
+          <a href="#join" class="btn btn-primary btn-lg hero-cta">Начать сейчас</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- О нас -->
+  <section id="about" class="py-5">
+    <div class="container">
+      <div class="row justify-content-center text-center mb-4">
+        <div class="col-lg-8">
+          <h2 class="section-title">О нас</h2>
+          <p class="text-muted">Мы создаём простые структуры, которые превращают намерение в действие. Ты выбираешь 1 навык и 7 последовательных шагов.</p>
+        </div>
+      </div>
+      <div class="row g-4" id="services">
+        <!-- Преимущества / карточки -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 feature-card">
+            <div class="card-body">
+              <div class="feature-icon" aria-hidden="true">🎯</div>
+              <h3 class="h5">Фокус на одном</h3>
+              <p class="mb-0">Убираем шум. Один навык — одна неделя — один понятный результат.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 feature-card">
+            <div class="card-body">
+              <div class="feature-icon" aria-hidden="true">🧭</div>
+              <h3 class="h5">Чёткий маршрут</h3>
+              <p class="mb-0">План из 7 шагов, подсказки и контрольные точки для обратной связи.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 feature-card">
+            <div class="card-body">
+              <div class="feature-icon" aria-hidden="true">⚡</div>
+              <h3 class="h5">Малые действия</h3>
+              <p class="mb-0">Мини‑шаги занимают 15–30 минут в день. Удобно и реально.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA секция -->
+  <section id="join" class="py-5 bg-light">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6">
+          <h2 class="section-title">Готов начать?</h2>
+          <p class="mb-4">Оставь контакты и получи шаблон из 7 шагов. Начни сегодня.</p>
+          <ul class="list-unstyled small text-muted mb-0">
+            <li>• PDF-шаблон плана</li>
+            <li>• Чек-лист ежедневных действий</li>
+            <li>• Микро‑советы по удержанию фокуса</li>
+          </ul>
+        </div>
+        <div class="col-lg-6">
+          <form id="contactForm" novalidate class="needs-validation card p-3 p-sm-4 shadow-sm">
+            <div class="mb-3">
+              <label for="name" class="form-label">Имя</label>
+              <input type="text" id="name" name="name" class="form-control form-control-lg" placeholder="Как к тебе обращаться?" required autocomplete="name" inputmode="text" minlength="2" />
+              <div class="invalid-feedback">Укажи имя (минимум 2 символа).</div>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" id="email" name="email" class="form-control form-control-lg" placeholder="you@example.com" required autocomplete="email" inputmode="email" />
+              <div class="invalid-feedback">Введи корректный email.</div>
+            </div>
+            <div class="mb-3">
+              <label for="phone" class="form-label">Телефон</label>
+              <input type="tel" id="phone" name="phone" class="form-control form-control-lg" placeholder="+7 900 000-00-00" autocomplete="tel" inputmode="tel" pattern="^\+?[0-9\s\-\(\)]{10,}$" />
+              <div class="invalid-feedback">Введи корректный телефон.</div>
+            </div>
+            <div class="mb-3">
+              <label for="goal" class="form-label">Цель на 7 дней</label>
+              <input type="text" id="goal" name="goal" class="form-control form-control-lg" placeholder="Например: выучить 50 слов по английскому" autocomplete="off" />
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg w-100 submit-btn">Получить материалы</button>
+            <p class="form-hint text-muted small mt-2 mb-0">Нажимая кнопку, ты соглашаешься с условиями обработки данных.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Контакты -->
+  <footer id="contacts" class="py-4 bg-dark text-white">
+    <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
+      <p class="mb-0 small">© 2025 Skill7. Все права защищены.</p>
+      <nav class="footer-nav d-flex gap-3">
+        <a class="link-light link-underline-opacity-0" href="#">Политика</a>
+        <a class="link-light link-underline-opacity-0" href="#">Условия</a>
+        <a class="link-light link-underline-opacity-0" href="#contacts">Поддержка</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

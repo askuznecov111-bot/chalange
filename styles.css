@@ -1,0 +1,90 @@
+/* Базовая типографика и переменные */
+:root{
+  --hero-min-h: 72vh;
+  --touch-min: 44px;
+}
+*{ box-sizing: border-box; }
+html{ scroll-behavior:smooth; }
+body{
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.5;
+}
+img{ max-width: 100%; height: auto; display: block; }
+
+/* Кнопка CTA заметнее на тёмном фоне */
+.btn-cta{ padding-inline: 1rem; padding-block: .5rem; }
+
+/* Hero */
+.hero-section{
+  min-height: var(--hero-min-h);
+  display: grid;
+  align-items: center;
+  position: relative;
+  overflow: clip;
+}
+.hero-bg{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+  z-index: -2;
+}
+.hero-overlay{
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.35));
+  z-index: -1;
+}
+.hero-title{ letter-spacing: -.02em; }
+.hero-subtitle{ max-width: 48ch; }
+.hero-cta{ min-height: var(--touch-min); min-width: 180px; }
+
+/* Секция преимуществ */
+.section-title{ font-weight: 700; }
+.feature-card{
+  border: 1px solid rgba(0,0,0,.07);
+  transition: transform .25s ease, box-shadow .25s ease;
+  border-radius: 16px;
+}
+.feature-icon{ font-size: 1.75rem; margin-bottom: .5rem; }
+
+/* Hover эффекты только для устройств с курсором */
+@media (hover: hover) and (pointer: fine){
+  .feature-card:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(0,0,0,.12);
+  }
+}
+
+/* Карточки на 1/2/3 колонки под управлением Bootstrap grid, 
+   здесь лишь доп. паддинги и визуальные детали */
+.card-body{ padding: 1.25rem 1.25rem 1rem; }
+
+/* Форма: крупные поля и удобные тач-цели */
+.form-control-lg, .btn-lg, .submit-btn{ min-height: var(--touch-min); }
+.form-control::placeholder{ color: #9aa3ad; }
+
+/* Мобильные настройки */
+@media (max-width: 575.98px){
+  h1, .display-5{ font-size: 1.75rem; }          /* читаемый заголовок */
+  .lead{ font-size: 1rem; }                       /* читаемый подзаголовок */
+  .hero-section{ padding-block: 2.5rem; }
+  .hero-cta{ width: 100%; }                       /* удобная большая кнопка */
+  .navbar .btn-cta{ margin-top: .5rem; }          /* удобное попадание по кнопке */
+  .feature-card{ border-radius: 14px; }
+  .card-body{ padding: 1rem; }
+}
+
+/* Планшеты */
+@media (min-width: 576px) and (max-width: 991.98px){
+  .hero-section{ padding-block: 3rem; }
+  .hero-title{ font-size: 2.25rem; }
+  .lead{ font-size: 1.125rem; }
+}
+
+/* Десктоп */
+@media (min-width: 992px){
+  .hero-section{ padding-block: 4rem; }
+}
